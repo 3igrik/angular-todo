@@ -1,0 +1,9 @@
+<div class="todo-item">
+  <h3>{{ todo.title }}</h3>
+  <div class="todo-actions">
+    <button *ngIf="!todo.completed" class="todo-actions__btn p-button-success" pButton icon="pi pi-check" (click)="onComplete()"></button>
+    <button class="todo-actions__btn p-button-info" pButton icon="pi pi-exclamation-circle" (click)="onOpen()"></button>
+    <button *ngIf="!todo.completed" class="todo-actions__btn" pButton icon="pi pi-pencil" (click)="onEdit()"></button>
+    <button pButton icon="pi pi-trash" class="p-button-danger todo-actions__btn" (click)="onDelete()"></button>
+  </div>
+</div>

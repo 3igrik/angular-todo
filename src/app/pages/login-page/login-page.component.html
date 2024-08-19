@@ -1,0 +1,32 @@
+<div class="login-container">
+  <p-card header="Login" styleClass="ui-card-shadow">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <div class="fields-container">
+        <div class="fields-container__item">
+          <label for="email" class="input-label">Email *</label>
+          <input id="email" pInputText formControlName="email" />
+            @if (loginForm.get('email')?.touched && loginForm.get('email')?.errors; as errors) {
+              @if (errors['required']) {
+                <small class="p-error">Email is required</small>
+              }
+
+              @if (errors['email']) {
+                <small class="p-error">Invalid email format</small>
+              }
+            }
+        </div>
+        <div class="fields-container__item">
+          <label for="password" class="input-label">Password *</label>
+          <input id="password" pInputText type="password" formControlName="password" />
+
+          @if (loginForm.get('password')?.invalid && loginForm.get('password')?.touched) {
+            <small class="p-error">Password is required</small>
+          }
+        </div>
+        <div class="fields-container__item">
+          <button pButton type="submit" label="Login" class="p-mt-2" [disabled]="loginForm.invalid"></button>
+        </div>
+      </div>
+    </form>
+  </p-card>
+</div>

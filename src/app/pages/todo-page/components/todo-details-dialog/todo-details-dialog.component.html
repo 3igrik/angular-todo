@@ -1,0 +1,6 @@
+<div *ngIf="todo as todo">
+  <h2>{{ todo.title }}</h2>
+  <p><strong>Created at:</strong> {{ todo.createdAt | date: 'medium' }}</p>
+  <p><strong>Updated at:</strong> {{ todo.updatedAt | date: 'medium' }}</p>
+  <p><strong>Completed:</strong> {{ todo.completed }}</p>
+</div>

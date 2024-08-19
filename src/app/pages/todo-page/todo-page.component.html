@@ -1,0 +1,20 @@
+<div class="todo-header">
+  <h1 class="todo-header__title">ToDo</h1>
+  <button class="todo-header__logout-btn" pButton label="Logout" icon="pi pi-sign-out" class="p-button-danger" (click)="logout()"></button>
+</div>
+
+<div class="todo-container">
+  <div class="todo-container__header">
+    <h2>Todo List</h2>
+    <button pButton label="Add New Todo" icon="pi pi-plus" (click)="addTodo()"></button>
+  </div>
+
+  <div *ngIf="todos$ | async as todos;" class="todo-list">
+    @for (todo of todos; track $index) {
+      <app-todo-item
+        [todo]="todo"
+      ></app-todo-item>
+    }
+  </div>
+  <app-loader *ngIf="listIsLoading$ | async"></app-loader>
+</div>

@@ -1,0 +1,25 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.ui-card-shadow {
+  width: 25rem;
+}
+
+.fields-container {
+  display: flex;
+  flex-flow: column;
+  row-gap: 12px;
+
+  &__item {
+    display: flex;
+    flex-flow: column;
+  }
+}
+
+.input-label {
+  margin-bottom: 4px;
+}

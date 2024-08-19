@@ -1,0 +1,25 @@
+.todo-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-bottom: rgb(255, 0, 0) 2px solid;
+
+  &__title {
+    margin: 0;
+  }
+
+  &__logout-btn {
+    margin-left: auto;
+  }
+}
+
+.todo-container {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+}

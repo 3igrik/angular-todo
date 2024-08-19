@@ -1,0 +1,13 @@
+<div class="p-fluid">
+  <div class="p-field">
+    <label for="title">Title *</label>
+    <input #titleInputRef="ngModel" id="title" required="true" pInputText [(ngModel)]="title" placeholder="Enter title" />
+    @if (titleInputRef.invalid && titleInputRef.touched) {
+      <small class="p-error">Title is required</small>
+    }
+  </div>
+</div>
+<div class="dialog-actions">
+  <button pButton type="button" label="Save" icon="pi pi-check" [disabled]="!title" (click)="save()"></button>
+  <button pButton type="button" label="Cancel" icon="pi pi-times" class="p-button-secondary" (click)="close()"></button>
+</div>

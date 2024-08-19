@@ -19,7 +19,27 @@
         "plugin:@nx/angular",
         "plugin:@angular-eslint/template/process-inline-templates"
       ],
-      "rules": {
+    "rules": {
+        "semi": [2, "always"],
+        "max-len": ["error", {"code": 120, "ignorePattern": "^import\\s.+\\sfrom\\s.+;$"}],
+        "one-var": ["error", "never"],
+        "eol-last": ["error", "always"],
+        "no-multiple-empty-lines": ["error", {"max": 1, "maxEOF": 1}],
+        "quote-props": ["error", "consistent", {"keywords": true, "unnecessary": false}],
+        "quotes": ["error", "single", {"allowTemplateLiterals": true, "avoidEscape": true}],
+        "import/named": 0,
+        "import/namespace": 0,
+        "@typescript-eslint/padding-line-between-statements": [
+          "warn",
+          {"blankLine": "always", "prev": "*", "next": ["if", "for", "while", "switch"]},
+          {"blankLine": "always", "prev": "*", "next": "return"},
+          {"blankLine": "always", "prev": ["const", "let"], "next": "*"},
+          {"blankLine": "always", "prev": "*", "next": ["const", "let"]},
+          {"blankLine": "any", "prev": ["const", "let"], "next": ["export", "const", "let"]}
+        ],
+        "@typescript-eslint/no-explicit-any": 0,
+        "@typescript-eslint/no-unused-vars": ["error", {"ignoreRestSiblings": true}],
+        "@typescript-eslint/no-var-requires": 0,
         "@angular-eslint/directive-selector": [
           "error",
           {

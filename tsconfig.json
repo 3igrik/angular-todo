@@ -13,7 +13,12 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {},
+    "paths": {
+      "@guards": ["./src/app/guards/index.ts"],
+      "@shared/interceptors": ["./src/app/shared/interceptors/index.ts"],
+      "@shared/services": ["./src/app/shared/services/index.ts"],
+      "@shared/ui": ["./src/app/shared/ui/index.ts"]
+    },
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "noImplicitOverride": true,

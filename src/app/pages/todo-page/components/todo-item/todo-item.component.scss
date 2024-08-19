@@ -1,0 +1,21 @@
+:host {
+  display: block;
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: aliceblue;
+  border-bottom: black 2px solid;
+  padding: 0 8px;
+}
+
+.todo-actions {
+  display: flex;
+  column-gap: 20px;
+
+  &__btn {
+    cursor: pointer;
+  }
+}
